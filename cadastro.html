@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="imagens/animals.png">
+    <title>Pet Shop - Mais Pet</title>
+</head>
+<body>
+    <header>
+        <h1>Pet Shop - Mais Pet</h1>
+    </header>
+    <nav>
+        <button id="botao-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <div id="nav-itens">
+            <a href="index.html">Inicio</a>
+            <a href="cadastro.html">Cadastre seu Pet!</a>
+            <a href="lista.html">Informações dos Pets!</a>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <h2>Cadastre seu Pet!!!</h2>
+            <div id="cadastro">
+                <h3>Informações sobre o Pet</h3>
+                <form action="">
+                    <div class="dados">
+                        <label for="name">Nome do Dono: </label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="dados">
+                        <label for="cpf">CPF do Dono: </label>
+                        <input type="text" name="cpf" id="cpf">
+                    </div>
+                    <div class="dados">
+                        <label for="name-pet">Nome do Pet: </label>
+                        <input type="text" name="name-pet" id="name-pet">
+                    </div>
+                    <div class="dados">
+                        <label for="raca">Raça do Pet: </label>
+                        <input type="text" name="raca" id="raca">
+                    </div>
+                    <div class="dados">
+                        <label for="ano">Ano de Nascimento do Pet: </label>
+                        <input type="text" name="ano" id="ano">
+                    </div>
+                    <div class="dados">
+                        <label for="foto">Foto do Pet: </label>
+                        <input type="file" name="foto" id="foto">
+                    </div>
+                    <div class="button">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>Fale Conosco</h3>
+        <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+            </svg>
+            Av. Capitão Olinto Mancini, 4040, Jardim Alvorada, Três Lagoas-MS</p>
+        <address> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+            </svg>
+            mais_pet@gmail.com</address>
+    </footer>
+    <script src="principal.js"></script>
+</body>
+</html>
