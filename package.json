@@ -1,15 +1,22 @@
 {
-  "name": "express",
+  "name": "pagina_pet_shop",
   "version": "1.0.0",
-  "description": "",
+  "description": "Página engloba os conceitos envolvendo JavaScript, HTML e CSS.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OliveiraBarbara/Pagina_Pet_Shop.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OliveiraBarbara/Pagina_Pet_Shop/issues"
+  },
+  "homepage": "https://github.com/OliveiraBarbara/Pagina_Pet_Shop#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-validator": "^6.12.0",
