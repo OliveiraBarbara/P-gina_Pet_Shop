@@ -142,6 +142,16 @@ button[type=reset]{
     color: white;
 }
 
+table{
+    margin: 25px;
+    border: 0.5px solid black;
+}
+
+th, td {
+    border: 0.5px solid black;
+    padding: 15px;
+}
+
 footer{
     background-color: var(--cor-fundo);
     color: var(--cor-texto);

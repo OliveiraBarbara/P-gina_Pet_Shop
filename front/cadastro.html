@@ -21,11 +21,11 @@
         <div id="nav-itens">
             <a href="index.html">Inicio</a>
             <a href="cadastro.html">Cadastre seu Pet!</a>
-            <a href="lista.html">Informações dos Pets!</a>
+            <a href="#lista">Informações dos Pets!</a>
         </div>
     </nav>
     <main>
-        <section>
+        <section id="section-cadastro">
             <h2>Cadastre seu Pet!!!</h2>
             <div id="cadastro">
                 <h3>Informações sobre o Pet</h3>
@@ -55,11 +55,27 @@
                         <input type="file" name="foto" id="foto">
                     </div>
                     <div class="button">
-                        <button type="submit">Enviar</button>
+                        <button type="submit" id="cad-pet">Enviar</button>
                         <button type="reset">Limpar</button>
                     </div>
                 </form>
             </div>
+        </section>
+        <section id="section-tabelas">
+            <h2>Informações dos Pets Cadastrados!!!</h2>
+            <table id="table-pets">
+                <div class="linha">
+                    <tr>
+                        <div class="colunaNome"><th>Nome do Dono</th></div>
+                        <div class="colunaCPF"><th>CPF do Dono</th></div>
+                        <div class="colunaNomePet"><th>Nome do Pet</th></div>
+                        <div class="colunaRaca"><th>Raça do Pet</th></div>
+                        <div class="colunaAno"><th>Ano de Nascimento do Pet</th></div>
+                        <div class="colunaEditar"><th>Editar</th></div>
+                        <div class="colunaExcluir"><th>Excluir</th></div>
+                    </tr>
+                </div>
+            </table>
         </section>
     </main>
     <footer>
@@ -76,5 +92,6 @@
             mais_pet@gmail.com</address>
     </footer>
     <script src="principal.js"></script>
+    <script src="lista_pet.js"></script>
 </body>
 </html>
