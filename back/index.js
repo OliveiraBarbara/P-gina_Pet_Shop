@@ -1,11 +1,6 @@
 const app = require('./src/config/custom-express')
 const mongo = require('./src/config/database')
-const cors = require('cors')
 const express = require('express')
-
-app.use(express.urlencoded({extended:true}))
-app.use(express.json())
-app.use(cors())
 
 mongo.cliente.connect(mongo.uri, function(err, client){
     if(err){

@@ -7,8 +7,8 @@ const objNaoEncontrado = { 'mensagem': "Pet não encontrado" }
 class PetsControler {
     routes() {
         return {
-            'base': '/app/animais/',
-            'id': '/app/animais/:id'
+            'base': '/animais/',
+            'id': '/animais/:id'
         }
     }
 

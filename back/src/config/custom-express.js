@@ -1,8 +1,17 @@
 const express = require('express')
 const routesPets = require('../app/routes/routes-animals')
 const app = express()
+const cors = require('cors')
 
+app.use(cors())
+app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+
+app.use((req, resp, next) => {
+    req.body.cpf = Number(req.body.cpf)
+    next()
+})
+
 routesPets(app)
 
 app.use((req,resp)=>{

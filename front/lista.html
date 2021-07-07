@@ -25,41 +25,21 @@
         </div>
     </nav>
     <main>
-        <section id="section-cadastro">
-            <h2>Cadastre seu Pet!!!</h2>
-            <div id="cadastro">
-                <h3>Informações sobre o Pet</h3>
-                <form id="form-pet" action="">
-                    <div class="dados">
-                        <label for="name">Nome do Dono: </label>
-                        <input type="text" name="name" id="nome">
-                    </div>
-                    <div class="dados">
-                        <label for="cpf">CPF do Dono: </label>
-                        <input type="text" name="cpf" id="cpf">
-                    </div>
-                    <div class="dados">
-                        <label for="name-pet">Nome do Pet: </label>
-                        <input type="text" name="name-pet" id="nomePet">
-                    </div>
-                    <div class="dados">
-                        <label for="raca">Raça do Pet: </label>
-                        <input type="text" name="raca" id="raca">
-                    </div>
-                    <div class="dados">
-                        <label for="ano">Ano de Nascimento do Pet: </label>
-                        <select name="ano" id="ano"></select>
-                    </div>
-                    <div class="dados">
-                        <label for="foto">Foto do Pet: </label>
-                        <input type="file" name="foto" id="foto">
-                    </div>
-                    <div class="button">
-                        <button type="submit" id="cad-pet">Enviar</button>
-                        <button type="reset">Limpar</button>
-                    </div>
-                </form>
-            </div>
+        <section id="section-tabelas">
+            <h2>Informações dos Pets Cadastrados!!!</h2>
+            <table id="table-pets">
+                <div class="linha">
+                    <tr>
+                        <div class="colunaNome"><th>Nome do Dono</th></div>
+                        <div class="colunaCPF"><th>CPF do Dono</th></div>
+                        <div class="colunaNomePet"><th>Nome do Pet</th></div>
+                        <div class="colunaRaca"><th>Raça do Pet</th></div>
+                        <div class="colunaAno"><th>Ano de Nascimento do Pet</th></div>
+                        <div class="colunaEditar"><th>Editar</th></div>
+                        <div class="colunaExcluir"><th>Excluir</th></div>
+                    </tr>
+                </div>
+            </table>
         </section>
     </main>
     <footer>
@@ -76,6 +56,6 @@
             mais_pet@gmail.com</address>
     </footer>
     <script src="principal.js"></script>
-    <script src="cad-pet.js"></script>
+    <script src="lista_pet.js"></script>
 </body>
 </html>

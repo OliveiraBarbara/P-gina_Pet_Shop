@@ -1,55 +1,31 @@
-const btSubmeter = document.getElementById('cad-pet')
-const formPet = document.getElementById('form-pet')
-const inputNome = document.getElementById('name')
-const inputCPF = document.getElementById('cpf')
-const inputNomePet = document.getElementById('name-pet')
-const inputRaca = document.getElementById('raca')
-const inputAno =  document.getElementById('ano')
 const tablePet = document.getElementById('table-pets')
 
-formPet.onsubmit = (e) =>{
-    e.preventDefault()
-    const tabela = criaTable(inputNome.value, inputCPF.value, inputNomePet.value, inputRaca.value, inputAno.value)
-    tablePet.appendChild(tabela)
-    formPet.reset()
-    alert('Pet Cadastrado com Sucesso!')
-}
+fetch('http://localhost:3000/animais/')
+    .then(resposta => resposta.json())
+    .then(dados => {
+        dados.forEach(element => {
+            const linha = document.createElement('tr')
+            const colunaNome = document.createElement('td')
+            colunaNome.innerText = element.nome
+            const colunaCPF = document.createElement('td')
+            colunaCPF.innerText = element.cpf
+            const colunaNomePet = document.createElement('td')
+            colunaNomePet.innerText = element.nomePet
+            const colunaRaca = document.createElement('td')
+            colunaRaca.innerText = element.raca
+            const colunaAno = document.createElement('td')
+            colunaAno.innerText = element.ano
+            linha.appendChild(colunaNome)
+            linha.appendChild(colunaCPF)
+            linha.appendChild(colunaNomePet)
+            linha.appendChild(colunaRaca)
+            linha.appendChild(colunaAno)
+            tablePet.appendChild(linha)
+        });
+    })
+    .catch(erro => console.log(erro))
 
-function criaTable(nomeDono, cpf, nomePet, raca, ano){
-    const divLinha = document.createElement('tr')
-    divLinha.classList.add('linha')
-
-    //Div coluna para Nome
-    const divColunaNome = document.createElement('td')
-    divColunaNome.classList.add('colunaNome')
-    divColunaNome.innerText = nomeDono
-    divLinha.appendChild(divColunaNome)
-
-    //Div coluna para CPF
-    const divColunaCPF = document.createElement('td')
-    divColunaCPF.classList.add('colunaCPF')
-    divColunaCPF.innerText = cpf
-    divLinha.appendChild(divColunaCPF)
-
-    //Div coluna para Nome Pet
-    const divColunaNomePet = document.createElement('td')
-    divColunaNomePet.classList.add('colunaNomePet')
-    divColunaNomePet.innerText = nomePet
-    divLinha.appendChild(divColunaNomePet)
-
-    //Div coluna para Raça
-    const divColunaRaca = document.createElement('td')
-    divColunaRaca.classList.add('colunaRaca')
-    divColunaRaca.innerText = raca
-    divLinha.appendChild(divColunaRaca)
-
-    //Div coluna para Ano
-    const divColunaAno = document.createElement('td')
-    divColunaAno.classList.add('colunaAno')
-    divColunaAno.innerText = ano
-    divLinha.appendChild(divColunaAno)
-
-    //Div do botão Editar
+    /*//Div do botão Editar
     const divEditar = document.createElement('td')
     divEditar.classList.add('colunaEditar')
     const btEditar = document.createElement('button')
@@ -72,7 +48,4 @@ function criaTable(nomeDono, cpf, nomePet, raca, ano){
         divLinha.remove()
     })
     divExcluir.appendChild(btExcluir)
-    divLinha.appendChild(divExcluir)
-
-    return divLinha                      
-}
+    divLinha.appendChild(divExcluir)*/
