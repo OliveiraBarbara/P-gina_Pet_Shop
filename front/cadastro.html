@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="imagens/animals.png">
+    <link rel="icon" href="../imagens/animals.png">
     <title>Pet Shop - Mais Pet</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
             <h2>Cadastre seu Pet!!!</h2>
             <div id="cadastro">
                 <h3>Informações sobre o Pet</h3>
-                <form action="">
+                <form id="form-pet" action="http://localhost:3000/app/animais/" method="POST" enctype="multipart/form-data">
                     <div class="dados">
                         <label for="name">Nome do Dono: </label>
                         <input type="text" name="name" id="name">
@@ -48,7 +48,7 @@
                     </div>
                     <div class="dados">
                         <label for="ano">Ano de Nascimento do Pet: </label>
-                        <input type="text" name="ano" id="ano">
+                        <select name="ano" id="ano"></select>
                     </div>
                     <div class="dados">
                         <label for="foto">Foto do Pet: </label>
@@ -92,6 +92,50 @@
             mais_pet@gmail.com</address>
     </footer>
     <script src="principal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="lista_pet.js"></script>
+    <script>
+        function ajax(){
+            const form = document.forms[0]
+            const conteudo = document.getElementById('section-tabelas')
+            form.onsubmit = (e) => {
+                const formData = new FormData(form)
+                const url = "http://localhost:3000/app/animais/"
+               
+                /*const nome = document.getElementById("name")
+                const cpf = document.getElementById('cpf')
+                const nomePet = document.getElementById('name-pet')
+                const raca = document.getElementById('raca')
+                const ano =  document.getElementById('ano')
+                const fileUpload = document.getElementById("foto")
+                formData.append("nome", nome.value)
+                formData.append("cpf", nome.value)
+                formData.append("name-pet", nome.value)
+                formData.append("raca", nome.value)
+                formData.append("ano", nome.value)
+                formData.append("foto", fileUpload.files[0])*/
+
+                const params = {
+                    url: url,
+                    method: "POST",
+                    body : JSON.stringify(formData),
+                    headers : {
+                        "Content-type": "application/json; charset=UTF-8"
+                    }
+                }
+
+                axios(params)
+                    .then((resultado) => console.log('Aqui'))
+                    .then((texto) => conteudo.innerText = texto)
+                    .catch((erro) => console.log(erro))
+                
+                const btnSubmit = document.getElementById('cad-pet')
+                btnSubmit.onclick = (e) => {
+                    e.preventDefault()
+                    ajax()
+                }
+            }
+        }
+    </script>
 </body>
 </html>

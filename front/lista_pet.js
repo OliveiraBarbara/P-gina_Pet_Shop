@@ -1,19 +1,17 @@
 const btSubmeter = document.getElementById('cad-pet')
-const formPet = document.getElementById('cadastro')
-
+const formPet = document.getElementById('form-pet')
 const inputNome = document.getElementById('name')
 const inputCPF = document.getElementById('cpf')
 const inputNomePet = document.getElementById('name-pet')
 const inputRaca = document.getElementById('raca')
 const inputAno =  document.getElementById('ano')
-
 const tablePet = document.getElementById('table-pets')
 
 formPet.onsubmit = (e) =>{
     e.preventDefault()
     const tabela = criaTable(inputNome.value, inputCPF.value, inputNomePet.value, inputRaca.value, inputAno.value)
     tablePet.appendChild(tabela)
-    formPet.onreset
+    formPet.reset()
     alert('Pet Cadastrado com Sucesso!')
 }
 
