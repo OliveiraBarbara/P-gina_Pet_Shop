@@ -58,8 +58,6 @@ function excluirLinha(btExcluir, id, linha){
             }
         }
 
-        console.log(params)
-    
         fetch('http://localhost:3000/animais/'+id, params)
             .then(resposta => resposta.json())
             .then(dados => {
