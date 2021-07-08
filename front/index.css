@@ -17,7 +17,7 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: 70px 1fr 130px;
+    grid-template-rows: 70px 1fr 160px;
     grid-template-areas:  "cabecalho cabecalho"
                           "navegacao principal"
                           "rodape rodape";
