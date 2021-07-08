@@ -5,7 +5,7 @@ class PetsModel{
         return [
             check('nome').trim().isLength({min : 3}).withMessage('Nome de Dono Inválido (ao menos 3 caracteres)'),
             check('nomePet').trim().isLength({min : 3}).withMessage('Nome de Pet Inválido (ao menos 3 caracteres)'),
-            //check('cpf').matches(/([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/).withMessage('CPF Inválido')
+            check('cpf').matches(/([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/).withMessage('CPF Inválido')
         ]
     }
 }

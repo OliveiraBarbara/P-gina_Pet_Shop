@@ -27,6 +27,12 @@ btEnviar.onclick = (e) => {
 
     fetch('http://localhost:3000/animais/', params)
         .then(resposta => resposta.json())
-        .then(dados => console.log(dados))
+        .then(dados =>{
+            if(dados.erro !== undefined){
+                alert('Campos Inválidos')
+            }else{
+                alert('Pet Cadastrado com Sucesso!!!') 
+            }  
+        })
         .catch(erro => console.log(erro))
 }
