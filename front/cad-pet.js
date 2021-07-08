@@ -11,10 +11,10 @@ btEnviar.onclick = (e) => {
     
     const dados = {
         nome: inputNome.value,
-        cpf: inputCPF,
+        cpf: inputCPF.value,
         nomePet: inputNomePet.value,
         raca: inputRaca.value,
-        ano: inputAno
+        ano: inputAno.value
     }
 
     params = {
